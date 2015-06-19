@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if User.exists?(params[:id])
       user = User.find(params[:id])
       updated_user = user.update(user_params)
-         render json: updated_user
+      render json: updated_user
     else
       render json: { error: 'User not found' }, status: 404
     end
