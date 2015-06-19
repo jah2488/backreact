@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+names = User.create(name:"aa", email:"a.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000001", address:"7890aaaDrive", zip_code: "78745")
+names = User.create(name:"cc", email:"c.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000003", address:"7890cccDrive", zip_code: "78745")
+names = User.create(name:"dd", email:"d.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000004", address:"7890dddDrive", zip_code: "78746")
+names = User.create(name:"ee", email:"e.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000005", address:"7890eeeDrive", zip_code: "78746")
+names = User.create(name:"ff", email:"f.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000006", address:"7890fffDrive", zip_code: "78746")
+names = User.create(name:"gg", email:"g.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000007", address:"7890hhhDrive", zip_code: "78747")
+names = User.create(name:"hh", email:"h.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000008", address:"7890iiiDrive", zip_code: "78747")
+names = User.create(name:"ii", email:"i.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000009", address:"7890jjjDrive", zip_code: "78747")
+names = User.create(name:"jj", email:"j.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000010", address:"7890kkkDrive", zip_code: "78748")
+names = User.create(name:"kk", email:"k.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000011", address:"7890lllDrive", zip_code: "78748")
+names = User.create(name:"ll", email:"l.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000012", address:"7890lllDrive", zip_code: "78748")
+names = User.create(name:"mm", email:"m.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000013", address:"7890mmmDrive", zip_code: "78749")
+names = User.create(name:"nn", email:"n.@abc.com", password:"123456", password_confirmation:"123456", phone_number: "5120000014", address:"7890nnnDrive", zip_code: "78749")
