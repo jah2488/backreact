@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
 
-  def index
+  # def index
    # @posts_and_votes = Link.all
     # @links_and_votes = Link.select('links.id, post, title, sum(number) as "vote_count"')
     #                        .joins('left join votes on votes.link_id = links.id')
@@ -76,4 +76,4 @@ class PostsController < ApplicationController
 #   def link_params
 #     params.require(:post).permit(:body, :user_id)
 #   end
-# end
+end
