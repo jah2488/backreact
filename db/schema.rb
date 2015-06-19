@@ -11,16 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150619032709) do
-=======
-ActiveRecord::Schema.define(version: 0) do
->>>>>>> 2ab39241bd5a900e86f343d8d8a8820413c6532e
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "carpools", force: :cascade do |t|
     t.string   "distance"
     t.string   "direction"
@@ -66,6 +61,4 @@ ActiveRecord::Schema.define(version: 0) do
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "users"
-=======
->>>>>>> 2ab39241bd5a900e86f343d8d8a8820413c6532e
 end

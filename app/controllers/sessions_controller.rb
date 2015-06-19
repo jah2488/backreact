@@ -1,15 +1,13 @@
 class SessionsController < ApplicationController
-  def new
-    render json: { message: 'Login successfully!' }
-  end
 
   def create
     user = User.find_by_email(params[:email])
     if user != nil && user.authenticate(params[:password])
       session[:user_id] = user.id
+      render json: { message: 'Login Successfully!' }, status: 200
     else
       flash[:alert] = 'Email or password did not match'
-      render :new
+      render json: { message: 'Login Did not work!' }, status: 401
     end
   end
 

@@ -21,8 +21,14 @@ class UsersController < ApplicationController
   def update
     if User.exists?(params[:id])
       user = User.find(params[:id])
-      updated_user = user.update(user_params)
-      render json: updated_user
+      user.username = params.fetch(:username, user.username)
+      user.email = params.fetch(:email, user.email)
+      user.password = params.fetch(:password, user.password)
+      user.password_confirmation = params.fetch(:password_confirmation, user.password_confirmation)
+      user.phone_number = params.fetch(:phone_number, user.phone_number)
+      user.address = params.fetch(:address, user.address)
+      user.zip_code = params.fetch(:zip_code, user.zip_code)
+      render json: user
     else
       render json: { error: 'User not found' }, status: 404
     end
@@ -36,6 +42,11 @@ class UsersController < ApplicationController
     else
       render json: { error: 'User not found' }, status: 404
     end
+  end
+
+  def get_pair
+    paired_user = User.where(zip_code: params[:zip_code])
+    render json: paired_user
   end
 
 private
