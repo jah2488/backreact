@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: User.where(zip_code: params[:zip_code])
+    render json: User.find(params[:id])
   end
 
 
@@ -18,15 +18,15 @@ class UsersController < ApplicationController
   end
 
 
-def update
-  if User.exists?(params[:id])
-    user = User.find(params[:id])
-    updated_user = User.update(user_params)
-       render json: updated_user
- else
-    render json: { error: 'User not found' }, status: 404
+  def update
+    if User.exists?(params[:id])
+      user = User.find(params[:id])
+      updated_user = user.update(user_params)
+         render json: updated_user
+    else
+      render json: { error: 'User not found' }, status: 404
+    end
   end
-end
 
 
   def destroy

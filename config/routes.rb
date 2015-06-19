@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
 
-get '/users/:zip_code', to: 'user#show'
+get '/users/:id', to: 'user#show'
 get '/users',  to:'users#index'
 post '/users', to: 'users#create'
-get '/users/edit/:id', to: 'users#update'
-put '/users/edit/:id', to: 'users#update'
+put '/users/:id', to: 'users#update'
 delete '/users/:id', to: 'users#destroy'
 
 
