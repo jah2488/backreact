@@ -10,26 +10,20 @@ class UsersController < ApplicationController
 
   def create
     begin
-      user = User.create(user_params)
+      user = User.create(username: params[:username], email:params[:email], password:params[:password], password_confirmation: params[:password_confirmation], phone_number: params[:phone_number], address: params[:address], zip_code: params[:zip_code])
       render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
     end
   end
 
+
 def update
   if User.exists?(params[:id])
-  user = User.find(params[:id])
-  user.username = params[:username] if params[:username].present?
-  user.email = params[:email]      if params[:email].present?
-  user.password = params[:password] if params[:password ].present?
-  user.password_confirmation = params[:password_confirmation]      if params[:password_confirmation].present?
-  user.phone_number = params[:phone_number]      if params[:phone_number].present?
-  user.address = params[:address]      if params[:address].present?
-  user.zip_code = params[:zip_code]      if params[:zip_code].present?
-  user.save
-  render json: user
-  else
+    user = User.find(params[:id])
+    updated_user = User.update(user_params)
+       render json: updated_user
+ else
     render json: { error: 'User not found' }, status: 404
   end
 end
