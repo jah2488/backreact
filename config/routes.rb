@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 get 'sessions/new'
 get '/users/:zip_code', to: 'user#show'
-get '/users', to: 'users#index'
-resources :comments
-resources :posts
+get '/users' => 'users#index'
+# resources :comments
+# resources :posts
 resources :users
 get '/signup', to: 'users#new'
 

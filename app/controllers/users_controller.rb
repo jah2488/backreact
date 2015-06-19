@@ -17,23 +17,23 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    if User.exists?(params[:id])
-    user = User.find(params[:id])
-    user.username = params[:username] if params[:username].present?
-    user.email = params[:email]      if params[:email].present?
-    user.password = params[:password] if params[:password ].present?
-    user.password_confirmation = params[:password_confirmation]      if params[:password_confirmation].present?
-    user.phone_number = params[:phone_number]      if params[:phone_number].present?
-    user.address = params[:address]      if params[:address].present?
-    user.zip_code = params[:zip_code]      if params[:zip_code].present?
-    user.save
-    render json: user
-    else
-      render json: { error: 'User not found' }, status: 404
-    end
-
+def update
+  if User.exists?(params[:id])
+  user = User.find(params[:id])
+  user.username = params[:username] if params[:username].present?
+  user.email = params[:email]      if params[:email].present?
+  user.password = params[:password] if params[:password ].present?
+  user.password_confirmation = params[:password_confirmation]      if params[:password_confirmation].present?
+  user.phone_number = params[:phone_number]      if params[:phone_number].present?
+  user.address = params[:address]      if params[:address].present?
+  user.zip_code = params[:zip_code]      if params[:zip_code].present?
+  user.save
+  render json: user
+  else
+    render json: { error: 'User not found' }, status: 404
   end
+end
+
 
   def destroy
     if User.exists?(params[:id])
