@@ -23,57 +23,57 @@ class PostsController < ApplicationController
     # rescue Exception => error
     #   render json: { error: error.message + " --- time range must be expressed as seconds >= 1."}, status: 422
     # end
-    render json: { message: 'Not Implemented Yet' }, status: 501
-  end
+#     render json: { message: 'Not Implemented Yet' }, status: 501
+#   end
 
-  def show
-    set_post
-  end
+#   def show
+#     set_post
+#   end
 
-  def new
-    @post = Post.new
-    @all_users = User.select_users
-  end
+#   def new
+#     @post = Post.new
+#     @all_users = User.select_users
+#   end
 
-  def edit
-    set_post
-    @all_users = User.select_users
-  end
-
-
-  def create
-    @post = post.new(link_params)
-
-    if @post.save
-      redirect_to @post, notice: 'Link was successfully created.'
-    else
-      render :new
-    end
-  end
-
-  def update
-    set_post
-    if @post.update(post_params)
-      redirect_to @link, notice: 'Link was successfully updated.'
-    else
-      render :edit
-    end
-
-  end
+#   def edit
+#     set_post
+#     @all_users = User.select_users
+#   end
 
 
-  def destroy
-    set_post
-    @link.destroy
-    redirect_to posts_url, notice: 'Link was successfully destroyed.'
-  end
+#   def create
+#     @post = post.new(link_params)
 
-  private
-  def set_post
-    @post = Post.find(params[:id])
-  end
+#     if @post.save
+#       redirect_to @post, notice: 'Link was successfully created.'
+#     else
+#       render :new
+#     end
+#   end
 
-  def link_params
-    params.require(:post).permit(:body, :user_id)
-  end
-end
+#   def update
+#     set_post
+#     if @post.update(post_params)
+#       redirect_to @link, notice: 'Link was successfully updated.'
+#     else
+#       render :edit
+#     end
+
+#   end
+
+
+#   def destroy
+#     set_post
+#     @link.destroy
+#     redirect_to posts_url, notice: 'Link was successfully destroyed.'
+#   end
+
+#   private
+#   def set_post
+#     @post = Post.find(params[:id])
+#   end
+
+#   def link_params
+#     params.require(:post).permit(:body, :user_id)
+#   end
+# end
