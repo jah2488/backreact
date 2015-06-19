@@ -33,7 +33,7 @@ var Signup = React.createClass({
 			</div>
 		);
 	},
-	submitSignup: function(e) {	
+	submitSignup: function(e) {
 		e.preventDefault();
 		var user = new UserModel({
 			username: this.refs.signupUsername.getDOMNode().value,
@@ -45,10 +45,9 @@ var Signup = React.createClass({
 			address: this.refs.signupZip.getDOMNode().value
 		});
 		if(!user.isValid) {
-			this.refs.error.getDOMNode().innerHTML = user.validationError; 
+			this.refs.error.getDOMNode().innerHTML = user.validationError;
 		} else {
 			// send data to the server
-
 		}
-	}	
+	}
 });

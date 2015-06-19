@@ -18,15 +18,15 @@ class UsersController < ApplicationController
   end
 
 
-def update
-  if User.exists?(params[:id])
-    user = User.find(params[:id])
-    updated_user = User.update(user_params)
-       render json: updated_user
- else
-    render json: { error: 'User not found' }, status: 404
+  def update
+    if User.exists?(params[:id])
+      user = User.find(params[:id])
+      updated_user = User.update(user_params)
+         render json: updated_user
+   else
+      render json: { error: 'User not found' }, status: 404
+    end
   end
-end
 
 
   def destroy
