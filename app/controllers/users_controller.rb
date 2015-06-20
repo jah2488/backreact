@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :update, :destroy]
+  before_action :allowed_to_modify!, only: [:update, :destroy]
   def index
     render json: User.all
   end
@@ -50,7 +52,14 @@ class UsersController < ApplicationController
   end
 
 private
-  def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :phone_number, :address, :zip_code)
+  def allowed_to_modify!
+    if User.exists? (params[:id])
+      user = User.find(params[:id])
+      if user.id != @current_user.id
+        redirect_to :back, status: 301 # alert: "Users can only modify their own data."
+      end
+    else
+      redirect_to :back, status: 302 # alert: "Could not find the selected User in the DB."
+    end
   end
 end
