@@ -17,11 +17,11 @@ var Login = React.createClass({
             		</label>
             	</form>
 
-            	<button name="login-btn">
+            	<button className="login-btn">
   					<strong>Log In</strong>
   				</button>
 
-				<button name="sign-up-btn">
+				<button className="sign-up-btn">
   					<strong>Sign up</strong>
   				</button>
 

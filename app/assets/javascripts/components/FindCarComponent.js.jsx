@@ -5,14 +5,14 @@ var FindCar = React.createClass({
 
 			<div className="ride-results-page">
 
-				<button name="logout-btn">
+				<button className="logout-btn">
   					<strong>Log Out</strong>
   				</button>	
 
 				<div className="logo"alt="Iron Rides logo">
 				</div>
 
-				<select name="Zipcode">
+				<select className="Zipcode">
     				<option value="78701" selected>78701</option>
    					<option value="78703">78703</option>
     				<option value="78704">78704</option>
@@ -21,14 +21,14 @@ var FindCar = React.createClass({
     				<option value="78702">78702</option>
   				</select>
 
-				<select name="Direction">
+				<select className="Direction">
     				<option value="North" selected>North</option>
     				<option value="South">South</option>
    					<option value="East">East</option>
   					<option value="West">West</option>
   				</select>
 
-  				<button name="submit-btn">
+  				<button className="submit-btn">
   					<strong>Submit</strong>
   				</button>
 

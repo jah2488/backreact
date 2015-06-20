@@ -19,11 +19,11 @@ var Welcome = React.createClass({
                   and take some cars of the roads.</p>        
   				</div>
 
-  				<button name="join-btn">
+  				<button className="join-btn">
   					<strong>Sign Up!</strong>
   				</button>
 
-            <button name="login-btn">
+            <button className="login-btn">
             <strong>Log In</strong>
           </button>
 

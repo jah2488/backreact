@@ -5,7 +5,7 @@ var Dashboard = React.createClass({
 
 			<div className="dashboard-page">
 
-				<button name="logout-btn">
+				<button className="logout-btn">
   					<strong>Log Out</strong>
   				</button>	
 
