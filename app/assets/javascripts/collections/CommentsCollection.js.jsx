@@ -1,4 +1,4 @@
 var CommentsCollection = Backbone.Collection.extend({
 	model: Comment,
-	url: ''
+	url: 'https://calm-thicket-5529.herokuapp.com'
 });
