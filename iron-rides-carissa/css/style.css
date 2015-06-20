@@ -1,0 +1,41 @@
+/*
+Error: Invalid CSS after " *\/": expected selector or at-rule, was "}"
+        on line 160 of css/style.scss
+
+155: 	.login-btn, 
+156: 	.sign-up-btn{
+157: 		margin: 0 auto;
+158: 	}
+159:  *\/
+160: }
+161: 
+162: 	
+163: 
+164: 
+165: 
+
+Backtrace:
+css/style.scss:160
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:1162:in `expected'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:1098:in `expected'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:43:in `parse'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:393:in `_to_tree'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Users/carissamelanson/.rvm/gems/ruby-2.2.0/gems/sass-3.4.14/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \" */\": expected selector or at-rule, was \"}\"\A         on line 160 of css/style.scss\A \A 155: 	.login-btn, \A 156: 	.sign-up-btn{\A 157: 		margin: 0 auto;\A 158: 	}\A 159:  */\A 160: }\A 161: \A 162: 	\A 163: \A 164: \A 165: "; }

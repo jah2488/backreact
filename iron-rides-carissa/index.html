@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="//use.typekit.net/pmu4ljr.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    
+  	<title>Iron Rides</title>
+   
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="utf-8"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+		<div id='container'>
+
+     <!--  WELCOME PAGE -->
+
+			<div class="welcome-page">
+
+				<img class="welcome-image" src="images/home-page-visual.png" alt="Iron Rides Carpool"/>
+
+				<div class="welcome-text">
+          			<h1>IRON RIDES</h1>
+          			<h2>A Carpooling App for Iron Yard Students</h2>
+          			<p>Iron Rides is an application that groups students together by their zipcodes and provides them with contact information so that they can start a conversation about carpooling to campus.<br>
+          
+                <strong>Sign up! Meet your classmates and take some cars of the roads!</strong></p>        
+  				</div>
+
+  				<button class="join-btn">
+  					<strong>Sign Up!</strong>
+  				</button>
+
+  				<button class="login-btn">
+  					<strong>Log In</strong>
+  				</button>
+
+          
+			</div>
+
+    <!--   LOGIN PAGE -->
+
+    <div className="login-page">
+        <!-- <img className="logo-graphic" src="images/home-page-visual.png" 
+            alt="Iron Rides Carpool"/> -->
+
+    
+        <form className="login-form" onSumbit={this.submitLogin}>
+                <label className="form-label"> Username 
+                  <input type="text" ref="username" className="input-box" placeholder="Enter your username"/>
+                </label>
+                
+                <label className="password"> Password 
+                  <input type="password" ref="password" className="input-box" placeholder="Enter your password"/>
+                </label>
+        </form>
+
+              <button className="login-btn">
+                 <strong>Log In</strong>
+              </button>
+
+              <button className="sign-up-btn">
+                 <strong>Sign up</strong>
+              </button>
+
+        <div className="error-msg">
+        </div>
+
+      </div>
+
+  			
+  	       <footer>
+          <p>Created by Gracie, Maryna and Carissa</p>
+          </footer>
+
+  		</div>
+ 
+</body>
+</html>
