@@ -6,12 +6,12 @@ class CommentsController < ApplicationController
   end
 
   def show
-    render json: comment = Comment.find([:id])
+    render json: comment = Comment.find(params[:id])
   end
 
 
   def create
-    comment = Comment.new(words: params[:words], user_id: @current_user.id, post_id: params[:post_id])
+    comment = Comment.create(words: params[:words], user_id: params[:id], post_id: params[:post_id])
     render json: comment
   end
 

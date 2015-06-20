@@ -7,12 +7,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    render jason: post = Post.find(params[:id])
+    render json: post = Post.find(params[:id])
   end
 
   def create
     begin
-      post = Post.create(body: params[:body], user_id: @current_user.id)
+      post = Post.create(body: params[:body], user_id: params[:user_id])
+      render json: post, status: 200
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
     end
