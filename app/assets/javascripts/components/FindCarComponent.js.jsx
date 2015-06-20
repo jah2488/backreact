@@ -1,5 +1,6 @@
 var FindCar = React.createClass({
 	render: function() {
+
 		return (
 
 			<div className="ride-results-page">
@@ -32,7 +33,7 @@ var FindCar = React.createClass({
   				</button>
 
 				<div className="results-box">
-					<h2>Start the carpool conversation!<br />
+					<h2>Start the carpool conversation!<br>
 					You can ride with these classmates!</h2>
 					<ul>
 						<li>Name</li>
@@ -46,3 +47,4 @@ var FindCar = React.createClass({
 		)
 	}	
 });
+

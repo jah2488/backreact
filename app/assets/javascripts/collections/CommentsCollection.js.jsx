@@ -1,4 +1,4 @@
-var CommentsCollection = Backbone.Collections.extend({
-	model: CommentModel,
+var CommentsCollection = Backbone.Collection.extend({
+	model: Comment,
 	url: ''
 });

@@ -1,5 +1,6 @@
 var Welcome = React.createClass({
 	render: function() {
+
 		return (
 
 			<div className="welcome-page">
@@ -19,7 +20,7 @@ var Welcome = React.createClass({
   				</div>
 
   				<button name="join-btn">
-  					<strong>Join us!</strong>
+  					<strong>Sign Up!</strong>
   				</button>
 
             <button name="login-btn">
@@ -31,3 +32,4 @@ var Welcome = React.createClass({
 		)
 	}	
 });
+

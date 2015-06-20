@@ -14,6 +14,8 @@ gem 'puma'
 gem 'react-rails'
 
 
+
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
@@ -25,6 +27,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-underscore'
   gem 'rails-assets-backbone'
   gem 'rails-assets-react'
+  gem 'rails-assets-moment'
+  gem 'rails-assets-validator'
   gem 'rails-assets-moment'
 end
 
