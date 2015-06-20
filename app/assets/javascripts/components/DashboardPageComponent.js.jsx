@@ -2,7 +2,7 @@ var Dashboard = React.createClass({
 	render: function() {
 		return (
 			<div className="dashboard-page">
-				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<div className="logout-btn">
 					<button>
 	  					<strong>Log Out</strong>
