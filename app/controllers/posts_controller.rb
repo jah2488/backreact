@@ -2,9 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :show, :update, :destroy]
   before_action :allowed_to_modify!, only: [:update, :destroy]
 
-
   def index
-    render json: post = Post.all
+    post = Post.all
   end
 
   def show

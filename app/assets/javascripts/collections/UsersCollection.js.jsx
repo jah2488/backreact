@@ -1,4 +1,4 @@
-var UsersCollection = Backbone.Collections.extend({
-	model: UserModel,
-	url: ''
+var UsersCollection = Backbone.Collection.extend({
+	model: User,
+	url: 'https://calm-thicket-5529.herokuapp.com'
 });
