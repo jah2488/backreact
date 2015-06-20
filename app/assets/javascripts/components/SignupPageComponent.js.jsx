@@ -3,7 +3,7 @@ var Signup = React.createClass({
 	render: function() {
 		return (
 			<div className='Signup-page'>
-				<div className='logo' alt='Iron Rides Logo'></div>
+				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<div className='form'>
 					<form className='Signup-form' onSubmit={this.submitSignup}>
 						<label className='form-label'>Username</label>
@@ -31,6 +31,9 @@ var Signup = React.createClass({
 						<button type='submit' ref='signupSubmit' className='submit-btn'>submit</button>
 					</form>
 				</div>
+				<footer>
+					<p>Created by Gracie, Maryna and Carissa</p>
+				</footer>
 			</div>
 		);
 	},

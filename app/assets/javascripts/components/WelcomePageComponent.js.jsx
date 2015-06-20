@@ -5,7 +5,7 @@ var Welcome = React.createClass({
 
 			<div className="welcome-page">
 			
-				<img className="logo-graphic" src="images/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 				<div className="welcome-text">
 
