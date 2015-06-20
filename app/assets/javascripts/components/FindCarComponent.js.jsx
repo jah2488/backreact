@@ -8,8 +8,8 @@ var FindCar = React.createClass({
 				<button className="logout-btn">
   					<strong>Log Out</strong>
   				</button>	
+				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
-				<div className="logo"alt="Iron Rides logo"></div>
 
 				<select className="Zipcode">
     				<option value="78701" selected>78701</option>
@@ -42,6 +42,9 @@ var FindCar = React.createClass({
 					</ul>
 
 				</div>
+				<footer>
+					<p>Created by Gracie, Maryna and Carissa</p>
+				</footer>
   			</div>
 		)
 	}	

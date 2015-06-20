@@ -4,7 +4,7 @@ var Login = React.createClass({
 		return (
 
 			<div className="login-page">
-				<img className="logo-graphic" src="images/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 		
 				<form className="login-form" onSumbit={this.submitLogin}>
 					<label className="form-label"> Username 
@@ -25,6 +25,9 @@ var Login = React.createClass({
 
 					<div className="error-msg"></div>
 				</form>
+				<footer>
+					<p>Created by Gracie, Maryna and Carissa</p>
+				</footer>
 			</div>
 		)
 	}	
