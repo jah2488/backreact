@@ -16,16 +16,6 @@ ActiveRecord::Schema.define(version: 20150619032709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "carpools", force: :cascade do |t|
-    t.string   "distance"
-    t.string   "direction"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "carpools", ["user_id"], name: "index_carpools_on_user_id", using: :btree
-
   create_table "comments", force: :cascade do |t|
     t.string   "words"
     t.integer  "user_id"
@@ -57,7 +47,6 @@ ActiveRecord::Schema.define(version: 20150619032709) do
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "carpools", "users"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "users"
