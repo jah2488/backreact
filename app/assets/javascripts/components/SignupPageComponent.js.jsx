@@ -9,7 +9,7 @@ var Signup = React.createClass({
 						<label className='form-label'>Username</label>
 						<input type='text' ref='signupUsername' className='input-box' placeholder='Enter your username' />
 						
-						<label className='form-label'>Password</label>
+						<label className='form-label'>password</label>
 						<input type='password' ref='signupPassword' className='input-box' placeholder='Enter your password' />
 						
 						<label className='form-label'>Confirm your password</label>
@@ -27,8 +27,8 @@ var Signup = React.createClass({
 						<label className='form-label'>Zip Code</label>
 						<input type='text' ref='signupZip' className='input-box' placeholder='78704' />
 						
-						<div className='error-msg' ref='error'></div>
-						<button type='submit' ref='signupSubmit' className='submit-btn'>Submit</button>
+						<div className='error-msg' ref='errror'></div>
+						<button type='submit' ref='signupSubmit' className='submit-btn'>submit</button>
 					</form>
 				</div>
 			</div>
@@ -46,7 +46,7 @@ var Signup = React.createClass({
 			address: this.refs.signupZip.getDOMNode().value
 		});
 		if(!user.isValid) {
-			this.refs.error.getDOMNode().innerHTML = user.validationError;
+			this.refs.errror.getDOMNode().innerHTML = user.validationError;
 		} else {
 			// send data to the server
 		}

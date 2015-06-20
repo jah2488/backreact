@@ -11,7 +11,7 @@ var Login = React.createClass({
 						<input type="text" ref="username" className="input-box" placeholder="Enter your username"/>
 					</label>
 					
-					<label className="password">Password 
+					<label className="password">password
 						<input type="password" ref="password" className="input-box" placeholder="Enter your password"/>
 					</label>
 
