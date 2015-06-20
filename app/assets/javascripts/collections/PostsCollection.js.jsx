@@ -1,4 +1,4 @@
-var PostsCollection = Backbone.Collections.extend({
-	model: PostModel,
+var PostsCollection = Backbone.Collection.extend({
+	model: Post,
 	url: ''
 });

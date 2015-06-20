@@ -1,7 +1,7 @@
 var Welcome = React.createClass({
 	render: function() {
-		return (
-
-		);
-	}	
+    return (
+      <h1>Welcome Page!</h1>
+    );
+	}
 });

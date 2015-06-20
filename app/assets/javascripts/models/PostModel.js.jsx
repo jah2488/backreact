@@ -3,7 +3,7 @@ var Post = Backbone.Model.extend({
 		id: null,
 		user_id: null,
 		body: null,
-		createdAt: null	
+		createdAt: null
 	},
 	validate: function(attr) {
 		if(!attr.body) {
