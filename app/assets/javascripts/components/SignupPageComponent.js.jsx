@@ -3,7 +3,7 @@ var Signup = React.createClass({
 	render: function() {
 		return (
 			<div className='Signup-page'>
-				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<div className='form'>
 					<form className='Signup-form' onSubmit={this.submitSignup}>
 						<label className='form-label'>Username</label>

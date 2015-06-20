@@ -43,6 +43,9 @@ button {
 
 }
 
+footer {
+	margin-top: 60px;
+}
 /* GRID */
 
 .container {
@@ -111,14 +114,14 @@ button {
 	margin: 0 auto;
 	width: 100%;
 
-	form {
-		width: 100%;
+	.field-box {
+		width: 300px;
 		font-family: "source-sans-pro";
 		background: $green;
 		border-radius: 5px;
 		padding: 16px;
 		overflow: hidden;
-	}
+	
 
 	.login-btn {
 		background-color: $blue;
@@ -129,11 +132,10 @@ button {
 
 	} 
 }
-
-
-footer {
-	margin-top: 60px;
 }
+
+
+
 
 
 
