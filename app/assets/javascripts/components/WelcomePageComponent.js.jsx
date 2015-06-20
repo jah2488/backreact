@@ -4,7 +4,7 @@ var Welcome = React.createClass({
 		return (
 
 			<div className="welcome-page">
-			
+
 				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 				<div className="welcome-text">
@@ -12,15 +12,15 @@ var Welcome = React.createClass({
 					<h1>IRON RIDES</h1>
 
 					<h2>A Carpooling App for Students</h2>
-				
-					<p>Iron Rides is an application that groups students together 
-						by their zipcodes and provides them with contact information 
+
+					<p>Iron Rides is an application that groups students together
+						by their zipcodes and provides them with contact information
 						so that they can start a conversation about carpooling to campus.
 						<br />
-						<strong>Sign up! Meet your classmates and take some cars off 
+						<strong>Sign up! Meet your classmates and take some cars off
 						the roads!</strong>
-					</p>  
-					 
+					</p>
+
 				</div>
 
 				<button className="join-btn">
@@ -36,6 +36,6 @@ var Welcome = React.createClass({
 				</footer>
 			</div>
 		)
-	}	
+	}
 });
 
