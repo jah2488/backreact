@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :allowed_to_modify!, only: [:update, :destroy]
 
   def index
-    post = Post.all
+    render json: post = Post.all
   end
 
   def show
