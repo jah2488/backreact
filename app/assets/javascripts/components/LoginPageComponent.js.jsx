@@ -4,33 +4,28 @@ var Login = React.createClass({
 		return (
 
 			<div className="login-page">
-				<img className="logo-graphic" src="images/home-page-visual.png" 
-            alt="Iron Rides Carpool"/>
-
+				<img className="logo-graphic" src="images/home-page-visual.png" alt="Iron Rides Carpool"/>
 		
 				<form className="login-form" onSumbit={this.submitLogin}>
-          			<label className="form-label"> Username 
-          				<input type="text" ref="username" className="input-box" placeholder="Enter your username"/>
-          			</label>
-            		
-            		<label className="password"> Password 
-            			<input type="password" ref="password" className="input-box" placeholder="Enter your password"/>
-            		</label>
-        </form>
+					<label className="form-label"> Username 
+						<input type="text" ref="username" className="input-box" placeholder="Enter your username"/>
+					</label>
+					
+					<label className="password">Password 
+						<input type="password" ref="password" className="input-box" placeholder="Enter your password"/>
+					</label>
 
-            	<button className="login-btn">
-  					     <strong>Log In</strong>
-  				    </button>
+					<button className="login-btn">
+						 <strong>Log In</strong>
+					</button>
 
-				      <button className="sign-up-btn">
-  					     <strong>Sign up</strong>
-  				    </button>
+					<button className="sign-up-btn">
+						<strong>Sign up</strong>
+					</button>
 
-				<div className="error-msg">
-				</div>
-
+					<div className="error-msg"></div>
+				</form>
 			</div>
-
 		)
 	}	
 });
