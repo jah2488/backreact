@@ -1,3 +1,5 @@
+/* global Backbone, validator */
+'use strict';
 var User = Backbone.Model.extend({
 	defaults: {
 		id: null,
@@ -14,16 +16,25 @@ var User = Backbone.Model.extend({
 			return 'Please enter your username';
 		} else if(!attr.password) {
 			return 'Please enter your password';
+<<<<<<< HEAD
 		} else if(!validator.isLength((attr.password), 6)) {
 			return 'Your password should be at least 6 characters';
 		} else if(!attr.password_confirmation) {
 			return 'Please enter your password';
 		} else if (!validator.isLength((attr.password_confirmation), 6)) {
 			return 'Your password should be at least 6 characters';
+=======
+		} else if (!validator.isLength(attr.password, 6)) {
+			return 'Your password be at least 6 characters';
+		} else if(!attr.password_confirmation) {
+			return 'Please enter your password';
+		} else if (!validator.isLength(attr.password_confirmation, 6)) {
+			return 'Your password be at least 6 characters';
+>>>>>>> front-end
 		} else if(!attr.email) {
 			return 'Please enter your email';
-		} else if (!validator.isEmail(attr.email)) {
-			return 'Your email address should contain @'
+		} else if(!validator.isEmail(attr.email)) {
+			return 'Your email address should contain @';
 		} else if(!attr.phone) {
 			return 'Please enter your phone number';
 		} else if(!validator.isNumeric(attr.phone)) {
@@ -32,8 +43,14 @@ var User = Backbone.Model.extend({
 			return 'Please enter your ZIP Code';
 		} else if(!validator.isNumeric(attr.zip_code)) {
 			return 'Your ZIP Code should only contain numbers';
+<<<<<<< HEAD
 		} else if(!validator.isLength((attr.zip_code), 5)) {
+=======
+		} else if(!validator.isLength(attr.zip_code, 5)) {
+>>>>>>> front-end
 			return 'ZIP Code should be 5 characters long';
-		} else { return false; }
+		} else {
+			return false;
+		}
 	}
-})
+});
