@@ -9,8 +9,7 @@ var FindCar = React.createClass({
   					<strong>Log Out</strong>
   				</button>	
 
-				<div className="logo"alt="Iron Rides logo">
-				</div>
+				<div className="logo"alt="Iron Rides logo"></div>
 
 				<select className="Zipcode">
     				<option value="78701" selected>78701</option>
