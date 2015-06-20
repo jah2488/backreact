@@ -1,7 +1,7 @@
-var Signup = React.createClass({
-	render: function() {
-		return (
+// var Signup = React.createClass({
+// 	render: function() {
+// 		return (
 			
-		)
-	}	
-});
+// 		)
+// 	}	
+// });

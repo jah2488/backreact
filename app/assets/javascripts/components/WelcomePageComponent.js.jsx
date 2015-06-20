@@ -3,22 +3,29 @@ var Welcome = React.createClass({
 		return (
 
 			<div className="welcome-page">
-
-				<button name="login-btn">
-  					<strong>Log In</strong>
-  				</button>
     		
-				<img className="welcome-image" alt="Iron Rides Carpool"/>
+				<img className="welcome-image" src="images/home-page-visual.png" 
+            alt="Iron Rides Carpool"/>
 
 				<div className="welcome-text">
+
           			<h1>IRON RIDES</h1>
+
           			<h2>A Carpooling App for Students</h2>
-          			<p>Iron Rides is an application that suggests students who live in the same zipcode to carpool to campus.</p>        
+                
+          			<p>Iron Rides is an application that suggests students who live 
+                  in the same zipcode to carpool to campus. Meet your classmates 
+                  and take some cars of the roads.</p>        
   				</div>
 
   				<button name="join-btn">
   					<strong>Join us!</strong>
   				</button>
+
+            <button name="login-btn">
+            <strong>Log In</strong>
+          </button>
+
 			</div>
 
 		)
