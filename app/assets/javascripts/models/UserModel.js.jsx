@@ -15,11 +15,11 @@ var User = Backbone.Model.extend({
 		} else if(!attr.password) {
 			return 'Please enter your password';
 		} else if(!validator.isLength((attr.password), 6)) {
-			return 'Your password be at least 6 characters';
+			return 'Your password should be at least 6 characters';
 		} else if(!attr.password_confirmation) {
 			return 'Please enter your password';
 		} else if (!validator.isLength((attr.password_confirmation), 6)) {
-			return 'Your password be at least 6 characters';
+			return 'Your password should be at least 6 characters';
 		} else if(!attr.email) {
 			return 'Please enter your email';
 		} else if (!validator.isEmail(attr.email)) {

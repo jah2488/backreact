@@ -1,7 +1,5 @@
 var Login = React.createClass({
 	render: function() {
-		return (
-
-		);
-	}	
+    	return (<div><h1>Hello world!</h1></div>);
+	}
 });
