@@ -4,7 +4,8 @@ var Login = React.createClass({
 		return (
 			<div className="login-page">
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
-		
+				<h2>Log in or sign up to start riding with your classmates!</h2>
+
 				<form className="login-form">
 					<label className="form-label">Email</label><br/>
 					<input type="email" ref="email" className="input-box" placeholder="Enter your email"/><br/>
@@ -23,7 +24,7 @@ var Login = React.createClass({
 					</button>
 				</form>
 				<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		)

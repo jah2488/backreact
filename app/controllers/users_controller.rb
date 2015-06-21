@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def create
     begin
-      user = User.create(username: params[:username], email:params[:email], password:params[:password], password_confirmation: params[:password_confirmation], phone_number: params[:phone_number], address: params[:address], zip_code: params[:zip_code])
+      user = User.create(username: params[:username], email:params[:email], password: params[:password], password_confirmation: params[:password_confirmation], phone_number: params[:phone_number], address: params[:address], zip_code: params[:zip_code])
       render json: user
     rescue ActionController::ParameterMissing => error
       render json: { error: error.message }, status: 422
@@ -53,11 +53,8 @@ class UsersController < ApplicationController
 
 private
   def allowed_to_modify!
-    if User.exists? (params[:id])
-      user = User.find(params[:id])
-      if user.id != @current_user.id
+      if params[:id] != @current_user.id
         redirect_to :back, status: 301 # alert: "Users can only modify their own data."
-      end
     else
       redirect_to :back, status: 302 # alert: "Could not find the selected User in the DB."
     end

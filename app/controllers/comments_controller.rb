@@ -1,66 +1,4 @@
 class CommentsController < ApplicationController
-<<<<<<< HEAD
- # before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
-
- #  def index
- #    @comments = Comment.all
- #  end
-
- #  def show
- #    set_comment
- #  end
-
-
- #  def new
- #    @comment = Comment.new
- #    @all_users = User.select_users
- #    @all_posts = Post.select_posts
- #  end
-
-
- #  def edit
- #    set_comment
- #    @all_users = User.select_users
- #    @all_posts = Post.select_posts
- #  end
-
-
- #  def create
- #    @comment = Comment.new(comment_params)
-
- #    if @comment.save
- #      redirect_to @comment, notice: 'Comment was successfully created.'
- #    else
- #      render :new
- #    end
- #  end
-
-
- #  def update
- #    set_comment
- #    if @comment.update(comment_params)
- #      redirect_to @comment, notice: 'Comment was successfully updated.'
- #    else
- #      render :edit
- #    end
- #  end
-
-
- #  def destroy
- #    set_comment
- #    @comment.destroy
- #    redirect_to comments_url, notice: 'Comment was successfully destroyed.'
- #  end
-
- #  private
- #  def set_comment
- #    @comment = Comment.find(params[:id])
- #  end
-
- #  def comment_params
- #    params.require(:comment).permit(:body, :user_id, :post_id)
- #  end
-=======
   before_action :authenticate_user!, only: [:show, :create, :update, :destroy]
   before_action :allowed_to_modify!, only: [:update, :destroy]
   def index
@@ -68,12 +6,12 @@ class CommentsController < ApplicationController
   end
 
   def show
-    render json: comment = Comment.find([:id])
+    render json: comment = Comment.find(params[:id])
   end
 
 
   def create
-    comment = Comment.new(words: params[:words], user_id: @current_user.id, post_id: params[:post_id])
+    comment = Comment.create(words: params[:words], user_id: params[:id], post_id: params[:post_id])
     render json: comment
   end
 
@@ -99,5 +37,4 @@ class CommentsController < ApplicationController
       redirect_to :back, status: 302 # alert: "Could not find the selected comment in the DB."
     end
   end
->>>>>>> gracie
 end

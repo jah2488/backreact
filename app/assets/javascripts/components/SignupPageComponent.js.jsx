@@ -7,6 +7,7 @@ var Signup = React.createClass({
     				<strong>Home</strong>
 				</button>
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<h2>We need your information!</h2>
 				<div className='form'>
 					<form className='Signup-form' onSubmit={this.submitSignup}>
 						<label className='form-label'>Username</label><br/>
@@ -35,7 +36,7 @@ var Signup = React.createClass({
 					</form>
 				</div>
 				<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		);
