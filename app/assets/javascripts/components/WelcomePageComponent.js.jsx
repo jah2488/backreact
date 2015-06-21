@@ -44,6 +44,6 @@ var Welcome = React.createClass({
 	gotoSignup: function(e) {
 		e.preventDefault();
 		app.navigate('/signup', {trigger: true});
-	}	
+	}
 });
 

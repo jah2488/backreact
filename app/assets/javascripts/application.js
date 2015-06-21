@@ -9,4 +9,3 @@
 //= require_directory ./collections
 //= require_directory ./components
 //= require_tree .
-
