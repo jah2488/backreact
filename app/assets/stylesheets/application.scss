@@ -102,6 +102,7 @@ footer{
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
+		margin:0 auto;
 
 		h1{padding: 4px;}
 
@@ -227,6 +228,10 @@ footer {
 
 /* DASHBOARD */
 .dashboard-page{
+	.post-box{
+		width: 340px;
+		margin: 0 auto;
+	}
 	
 }
 
@@ -257,13 +262,14 @@ footer {
 		.join-btn{margin-right:10px;}
 	}
 
-	.ride-results-page{
-		.search-form{
+		.search-form,
+		.post-box{
 		width: 500px;
-		margin: 0 auto;}
+		margin: 0 auto;
 	}
+	
 
-	.logout-btn{margin-right: 60px;}
+	/* .logout-btn{margin-right: 60px;} */
 	
 	
 }

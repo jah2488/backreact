@@ -9,6 +9,8 @@ var Dashboard = React.createClass({
 
 	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
+	  			<h2>Post Stuff!</h2>
+	  			
 				<div className="post-box"></div>
 
 				<footer>
