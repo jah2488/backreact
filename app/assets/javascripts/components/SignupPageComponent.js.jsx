@@ -4,30 +4,38 @@ var Signup = React.createClass({
 		return (
 			<div className='Signup-page'>
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
+				<h2>We need your information!</h2>
 				<div className='form'>
 					<form className='Signup-form' onSubmit={this.submitSignup}>
-						<label className='form-label'>Username</label>
+						<label className='form-label'>Username</label> &nbsp;
 						<input type='text' ref='signupUsername' className='input-box' placeholder='Enter your username' />
+						<br/>
 						
-						<label className='form-label'>password</label>
+						<label className='form-label'>password</label> &nbsp;
 						<input type='password' ref='signupPassword' className='input-box' placeholder='Enter your password' />
+						<br/>
 						
-						<label className='form-label'>Confirm your password</label>
+						<label className='form-label'>Confirm your password</label> &nbsp;
 						<input type='password' ref='signupPasswordConfirm' className='input-box' placeholder='Confirm your password' />
+						<br/>
 						
-						<label className='form-label'>Email</label>
+						<label className='form-label'>Email</label>&nbsp;
 						<input type='email' ref='signupEmail' className='input-box' placeholder='Enter your email' />
+						<br/>
 						
-						<label className='form-label'>Phone number</label>
+						<label className='form-label'>Phone number</label> &nbsp;
 						<input type='text' ref='signupPhone' className='input-box' placeholder='Enter your phone number' />
+						<br/>
 						
-						<label className='form-label'>Address</label>
+						<label className='form-label'>Address</label> &nbsp;
 						<input type='text' ref='signupAddress' className='input-box' placeholder='3601 S Congress Ave, Austin, TX' />
+						<br/>
 						
-						<label className='form-label'>Zip Code</label>
+						<label className='form-label'>Zip Code</label> &nbsp;
 						<input type='text' ref='signupZip' className='input-box' placeholder='78704' />
+						<br/>
 						
-						<div className='error-msg' ref='errror'></div>
+						<div className='error-msg' ref='errror'></div> 
 						<button type='submit' ref='signupSubmit' className='submit-btn'>submit</button>
 					</form>
 				</div>

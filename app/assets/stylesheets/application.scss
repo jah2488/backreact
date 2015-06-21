@@ -40,6 +40,7 @@ h2{
 	font-size: 1.8em;
 	line-height: 1.2;
 	color: $green;
+	margin-bottom: 20px;
 }
 
 p {
@@ -81,7 +82,8 @@ footer{
 
 /* WELCOME PAGE */
 .welcome-page, 
-.login-page{
+.login-page,
+.Signup-page{
 	margin: 0 auto;
 	padding: 20px;
 	text-align: center;
@@ -98,7 +100,7 @@ footer{
 
 		h1{padding: 4px;}
 
-		h2 {margin-bottom: 16px;}
+	/* 	h2 {margin-bottom: 16px;} */
 
 		p{ 
 		margin-bottom: 10px;
@@ -134,14 +136,22 @@ footer {
 		margin: 0 auto;
 	}
 	
-	h2{
+	/* h2{margin-bottom: 20px;} */
+	
+	.login-btn{margin-top: 30px;}
+
+	.join-btn{
+		margin-top: 20px;
 		margin-bottom: 20px;
+		margin-right: 10px;
 	}
+	}
+
 	.form-label, 
-	.password {
+	.password{
 		font-size: 1.2em;
 		font-family:"source-sans-pro";
-		line-height: 2;
+		
 	}
 
 	.input-box {
@@ -152,22 +162,44 @@ footer {
 		text-align: center;
 		margin-top: 20px;
 	}
-	.login-btn{
-		margin-top: 30px;
+
+/* 	SIGN UP PAGE */
+.Signup-page{
+	margin: 0 auto;
+	
+	.Signup-form{
+		width: 340px;
+		margin: 0 auto;
+			
+		.form-label{
+			float: left;
+			margin-top: 20px;
+			clear: left;	
+		}
+
+		.input-box {
+			width: 200px;
+			float: left;
+			margin-left: 10px;
+		}	
+
+		.submit-btn{
+		background-color: $green;
+		width: 200px;
+		margin-top: 20px;
+		padding: 10px;
+		
+	}
 	}
 
-	.join-btn{
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin-right: 10px;
-	}
-	}
+}
 
 /* MEDIUM MEDIA QUERY */
 
 @media screen and(min-width: 800px){
 
-	.welcome-page, .login-page {padding: 60px;
+	.welcome-page, .login-page, .Signup-page
+		{padding: 60px;
 
 	.welcome-image{max-width: 700px;}
 
@@ -184,12 +216,19 @@ footer {
 		form {width: 500px;}
 		.join-btn{margin-right:10px;}
 	}
+	
+
+
+
+
+
+	
 }
 
 /* LARGE MEDIA QUERY */
 @media screen and(min-width: 1300px){
 
-	.welcome-page, .login-page {padding: 100px;}
+	.welcome-page, .login-page, .Signup-page {padding: 100px;}
 
 
 
