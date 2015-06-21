@@ -32,7 +32,7 @@ var Signup = React.createClass({
 					</form>
 				</div>
 				<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		);

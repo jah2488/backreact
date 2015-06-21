@@ -15,7 +15,7 @@ var Welcome = React.createClass({
 
 					<p>Iron Rides is an application that groups students together
 						by their zipcodes and provides them with contact information
-						so that they can start a conversation about carpooling to campus.
+						so that they can start a conversation with their classmates about carpooling to campus.
 						<br />
 						<strong>Sign up! Meet your classmates and take some cars off
 						the roads!</strong>
@@ -32,7 +32,7 @@ var Welcome = React.createClass({
 		  		</button>
 
 		  		<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		)
