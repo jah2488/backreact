@@ -3,6 +3,11 @@ var Signup = React.createClass({
 	render: function() {
 		return (
 			<div className='Signup-page'>
+
+				<button className="home-btn">
+					<strong>Home</strong>
+		  		</button>
+				
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<h2>We need your information!</h2>
 				<div className='form'>
