@@ -1,52 +1,78 @@
 var FindCar = React.createClass({
 	render: function() {
-
-		return (
-			
+		return (			
 			<div className="ride-results-page">
-
-				<button className="logout-btn">
-  					<strong>Log Out</strong>
-  				</button>	
+				<div className='header-btn'>
+					<button className="logout-btn" onClick={this.logOut}>
+  						<strong>Log Out</strong>
+  					</button>
+  				</div>	
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
+				<form className='search-form' onSubmit={this.findClassmate}>
+					<label className='form-label' ref='zipCode'>Enter your ZIP Code</label><br/>
+					<input type='text' ref='searchZip' className='input-box' placeholder='ZIP Code' /><br/>
 
-				<select className="Zipcode">
-    				<option value="78701" selected>78701</option>
-   					<option value="78703">78703</option>
-    				<option value="78704">78704</option>
-  					<option value="78733">78733</option>
-  					<option value="78746">78746</option>
-    				<option value="78702">78702</option>
-  				</select>
-
-				<select className="Direction">
-    				<option value="North" selected>North</option>
-    				<option value="South">South</option>
-   					<option value="East">East</option>
-  					<option value="West">West</option>
-  				</select>
-
-  				<button className="submit-btn">
-  					<strong>Submit</strong>
-  				</button>
-
+	  				<button className="submit-btn">
+	  					<strong>Submit</strong>
+	  				</button>
+	  			</form>
+	  			<div>
+	  				<h2>
+		  				Start the carpool conversation!<br/>
+						You can ride with these classmates!
+					</h2>
+				</div>
 				<div className="results-box">
-					<h2>Start the carpool conversation!<br/>
-					You can ride with these classmates!</h2>
-					<ul>
-						<li>Name</li>
-						<li>Address</li>
-						<li>Phone Number</li>
-						<li>Email</li>
-					</ul>
-
+					<SearchResults />  //?????????
 				</div>
 				<footer>
 					<p>Created by Gracie, Maryna and Carissa</p>
 				</footer>
   			</div>
 		)
+	},
+	findClassmate: function(e) {
+		e.preventDefault();
+		var zip = this.refs.searchZip.getDOMNode().value;
+		var user = this.refs.user.getDOMNode();
+		var address = this.refs.address.getDOMNode();
+		var phone = this.refs.phone.getDOMNode();
+		var email = this.refs.email.getDOMNode();
+
+		$.ajax({ 													
+			url: 'https://calm-thicket-5529.herokuapp.com/search/zip_code/' + zip, 
+			dataType: 'json',
+			type: 'GET',
+			success: function(data) {
+				for(var i=0; i<data.length; i++) {
+					if(zip == data[i].zip_code) {
+						user.innerHTML = data[i].username;
+						address.innerHTML = data[i].address;
+						phone.innerHTML = data[i].phone;
+						email.innerHTML = data[i].email;
+					}
+				}
+				if(existedUser == true) {
+					error.innerHTML = 'Please choose another username';
+				} else if(!user.isValid()) {
+					error.innerHTML = user.validationError;
+				} else {
+					var newUser = user.attributes;
+					$.ajax({
+						url: 'https://calm-thicket-5529.herokuapp.com/users', 
+						dataType: 'json', 
+						type: 'POST', 
+						data: newUser
+					});
+					app.navigate('/search/zip_code/', {trigger: true});
+				}
+			} 
+		});
+		
+	},
+	logOut: function() {
+		app.navigate('', {trigger: true});
 	}	
 });
 
