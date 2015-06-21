@@ -6,7 +6,7 @@ var Dashboard = React.createClass({
 					<button>
 	  					<strong>Log Out</strong>
 	  				</button>
-	  			</div>	
+	  			</div>
 	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 				<div className="post-box"></div>
@@ -14,7 +14,7 @@ var Dashboard = React.createClass({
 					<p>Created by Gracie, Maryna and Carissa</p>
 				</footer>
 			</div>
-		)
-	}	
+		);
+	}
 });
 
