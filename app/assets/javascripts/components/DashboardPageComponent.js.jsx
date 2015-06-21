@@ -2,16 +2,17 @@ var Dashboard = React.createClass({
 	render: function() {
 		return (
 			<div className="dashboard-page">
-				<div className="logout-btn">
-					<button>
-	  					<strong>Log Out</strong>
-	  				</button>
-	  			</div>	
+
+				<button className="logout-btn" onClick={this.logOut}>
+                   <strong>Log Out</strong>
+                </button>
+
 	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 				<div className="post-box"></div>
+
 				<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		)

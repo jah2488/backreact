@@ -8,6 +8,6 @@ var SearchResults = React.createClass({
 				<li ref='email'></li>
 			</ul>
 	   	</div>
-		);
+		// );
 	}
 });

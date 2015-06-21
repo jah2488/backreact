@@ -11,6 +11,8 @@ var FindCar = React.createClass({
 
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
+				<h2>Start the carpool conversation!</h2>
+
 				<form className='search-form' onSubmit={this.findClassmate}>
 					<label className='form-label' ref='zipCode'>Enter your ZIP Code</label><br/>
 					<input type='text' ref='searchZip' className='input-box' placeholder='ZIP Code' /><br/>
@@ -21,15 +23,14 @@ var FindCar = React.createClass({
 	  			</form>
 	  			<div>
 	  				<h2>
-		  				Start the carpool conversation!<br/>
 						You can ride with these classmates!
 					</h2>
 				</div>
 				<div className="results-box">
-					<SearchResults />  //?????????
+				
 				</div>
 				<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
   			</div>
 		)
