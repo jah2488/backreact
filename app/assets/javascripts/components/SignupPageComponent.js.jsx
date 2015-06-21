@@ -35,7 +35,7 @@ var Signup = React.createClass({
 						<input type='text' ref='signupZip' className='input-box' placeholder='78704' /><br/>
 						
 						<div className='error-msg' ref='error'></div><br/>
-						<button type='submit' ref='signupSubmit' className='submit-btn'>Submit</button><br/>
+						<button type='submit' ref='signupSubmit' className='submit-btn'><strong>Submit</strong></button><br/>
 					</form>
 				</div>
 				<footer>
