@@ -4,9 +4,9 @@ var Signup = React.createClass({
 		return (
 			<div className='Signup-page'>
 
-				<button className="home-btn">
-					<strong>Home</strong>
-		  		</button>
+				<button className="home-btn" onClick={this.gotoWelcome}>
+                   <strong>Home</strong>
+                </button>
 				
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<h2>We need your information!</h2>

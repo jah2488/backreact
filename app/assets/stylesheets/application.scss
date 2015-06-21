@@ -166,6 +166,12 @@ footer {
 /* 	SIGN UP PAGE */
 .Signup-page{
 	margin: 0 auto;
+
+	.home-btn {
+		background-color:$blue;
+		float: right;
+		margin-bottom: 40px;
+	}
 	
 	.Signup-form{
 		width: 340px;
@@ -199,7 +205,7 @@ footer {
 @media screen and(min-width: 800px){
 
 	.welcome-page, .login-page, .Signup-page
-		{padding: 60px;
+		{padding: 40px;
 
 	.welcome-image{max-width: 700px;}
 
