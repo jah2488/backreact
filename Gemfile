@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'puma'
 gem 'react-rails'
+gem 'twilio-ruby', '~> 4.2.0'
+gem 'figaro'
 
 
 group :development, :test do
@@ -26,6 +28,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-backbone'
   gem 'rails-assets-react'
   gem 'rails-assets-moment'
+  gem 'rails-assets-validator'
 end
 
 group :production do
