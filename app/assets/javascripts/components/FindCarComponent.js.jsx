@@ -2,8 +2,7 @@ var FindCar = React.createClass({
 	render: function() {
 
 		return (
-			
-			<div className="ride-results-page">
+				<div className="ride-results-page">
 
 				<button className="logout-btn">
   					<strong>Log Out</strong>
@@ -49,5 +48,3 @@ var FindCar = React.createClass({
 		)
 	}	
 });
-
-
