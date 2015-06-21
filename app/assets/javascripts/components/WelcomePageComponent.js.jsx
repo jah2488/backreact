@@ -4,38 +4,46 @@ var Welcome = React.createClass({
 		return (
 
 			<div className="welcome-page">
-			
-				<img className="logo-graphic" src="images/home-page-visual.png" alt="Iron Rides Carpool"/>
+
+				<img className='welcome-image' src="/assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 				<div className="welcome-text">
 
 					<h1>IRON RIDES</h1>
 
 					<h2>A Carpooling App for Students</h2>
-				
-					<p>Iron Rides is an application that groups students together 
-						by their zipcodes and provides them with contact information 
-						so that they can start a conversation about carpooling to campus.
+
+					<p>Iron Rides is an application that groups students together
+						by their zipcodes and provides them with contact information
+						so that they can start a conversation with their classmates about carpooling to campus.
 						<br />
-						<strong>Sign up! Meet your classmates and take some cars off 
+						<strong>Sign up! Meet your classmates and take some cars off
 						the roads!</strong>
-					</p>  
-					 
+					</p>
+
 				</div>
 
-				<button className="join-btn">
+				<button className="join-btn" onClick={this.gotoSignup}>
 					<strong>Sign Up!</strong>
 				</button>
 
-				<button className="login-btn">
+				<button className="login-btn" onClick={this.gotoLogin}>
 					<strong>Log In</strong>
 		  		</button>
 
 		  		<footer>
-					<p>Created by Gracie, Maryna and Carissa</p>
+					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
 		)
+	},
+	gotoLogin: function(e) {
+		e.preventDefault();
+		app.navigate('/login', {trigger: true});
+	},
+	gotoSignup: function(e) {
+		e.preventDefault();
+		app.navigate('/signup', {trigger: true});
 	}	
 });
 

@@ -7,8 +7,12 @@ var Dashboard = React.createClass({
 	  					<strong>Log Out</strong>
 	  				</button>
 	  			</div>	
-				<div className="logo"alt="Iron Rides logo"></div>
+	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
+
 				<div className="post-box"></div>
+				<footer>
+					<p>Created by Gracie, Maryna and Carissa</p>
+				</footer>
 			</div>
 		)
 	}	

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -29,7 +29,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-react'
   gem 'rails-assets-moment'
   gem 'rails-assets-validator'
-  gem 'rails-assets-moment'
 end
 
 group :production do

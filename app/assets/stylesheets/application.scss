@@ -22,28 +22,29 @@ $blue: #3498db;
 $green: #1abc9c;
 $dkgrey: #666666;
 
-// /* Fonts */
-// $source: "source-sans-pro";
-// $altgoth: "alternate-gothic-no-3-d";
+/* Fonts */
+$source: "source-sans-pro";
+$altgoth: "alternate-gothic-no-3-d";
 
 /* TYPOGRAPHY */
-	
+
 h1{
-	font-family: "alternate-gothic-no-3-d", helvetica, arial, sans-serif;
-	font-size: 3em;
+	font-family: $altgoth, helvetica, arial, sans-serif;
+	font-size: 4em;
 	color: $navy;
 }
 
 h2{
-	font-family: "source-sans-pro", helvetica, arial, sans-serif;
+	font-family: $source, helvetica, arial, sans-serif;
 	font-weight: 600;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	line-height: 1.2;
 	color: $green;
+	margin-bottom: 20px;
 }
 
 p {
-	font-family: "source-sans-pro", helvetica, arial, sans-serif;
+	font-family: $source, helvetica, arial, sans-serif;
 	font-weight: 300;
 	font-size: 1.2em;
 	line-height: 1.6;
@@ -51,18 +52,24 @@ p {
 }
 
 button {
-	font-family: "source-sans-pro";
+	font-family: $source;
 	font-size: 1.25em;
 	color: #fff;
 	border-radius: 5px;
+	border: 0;
 
+}
+
+footer{
+	font-size: 1em;
+	font-family: $source;
 }
 
 /* GRID */
 
 .container {
 	width: 100%;
-	
+
 }
 
 *,
@@ -74,30 +81,28 @@ button {
 }
 
 /* WELCOME PAGE */
+
 .welcome-page, 
-.login-page{
+.login-page,
+.Signup-page{
+
 	margin: 0 auto;
 	padding: 20px;
 	text-align: center;
-	// margin-top: 60px;
-	
-
 
 	.welcome-image {
 		width: 100%;
 		margin-bottom: 18px;
 	}
-	
-	.welcome-text {
+
+	.welcome-text, form {
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
 
 		h1{padding: 4px;}
 
-		h2 {margin-bottom: 16px;}
-
-		p{ 
+		p{
 		margin-bottom: 10px;
 		text-align: left;}
 
@@ -107,7 +112,7 @@ button {
 		background-color: $green;
 		width: 200px;
 		padding: 10px;
-		margin-right: 10px;	
+		margin-right: 10px;
 	}
 
 	.login-btn {
@@ -115,10 +120,8 @@ button {
 		width: 200px;
 		padding: 10px;
 		margin-top: 16px;
-		margin-right: 10px;	
-
-	} 
-	
+		margin-right: 10px;
+	}
 }
 
 footer {
@@ -126,38 +129,109 @@ footer {
 }
 
 /* LOGIN PAGE */
+.login-page{
+
+	form{
+		width: 320px;
+		margin: 0 auto;
+	}
+	
+	.login-btn{margin-top: 30px;}
+
+	.join-btn{margin-top: 20px;}
 
 
+	h2{
+		margin-bottom: 20px;
+		margin-right: 10px;
+	}
+		
+}
 
+.form-label, 
+	.password, {
+		font-size: 1.2em;
+		font-family:"source-sans-pro";	
+	}
 
+	.input-box {
+		width: 140px;
+		height: 40px;
+		border-radius: 5px;
+		border: 0;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+/* 	SIGN UP PAGE */
+.Signup-page{
+	margin: 0 auto;
+	
+	.Signup-form{
+		width: 340px;
+		margin: 0 auto;
+			
+		.form-label{
+			float: left;
+			margin-top: 20px;
+			clear: left;	
+		}
+
+		.input-box {
+			width: 200px;
+			float: left;
+			margin-left: 10px;
+		}	
+
+		.submit-btn{
+		background-color: $green;
+		width: 200px;
+		margin-top: 20px;
+		padding: 10px;
+		
+	}
+	}
+
+}
 
 /* MEDIUM MEDIA QUERY */
 
 @media screen and(min-width: 800px){
 
-	.welcome-page {padding: 60px;
+	.welcome-page, .login-page, .Signup-page
+		{padding: 60px;
 
-	.welcome-image {max-width: 700px;}
+	.welcome-image{max-width: 700px;}
 
-	h1{font-size: 4em;}
+	h1{font-size: 5em;}
 
 	h2{
-		font-size: 2em;
+		font-size: 2.4em;
 		line-height: 1.6;
 	}
 
 	.join-btn {margin-right: 20px;}
 }
+	.login-page{
+		form {width: 500px;}
+		.join-btn{margin-right:10px;}
+	}
+	
+
+
+
+
+
+	
 }
 
 /* LARGE MEDIA QUERY */
 @media screen and(min-width: 1300px){
 
-	.welcome-page {padding: 100px;}
+	.welcome-page, .login-page, .Signup-page {padding: 100px;}
 
 
 
 	}
-
 
 
