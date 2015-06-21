@@ -44,31 +44,22 @@ var Login = React.createClass({
 		} else if(!password) {
 			error.innerHTML = 'Please enter your password';
 		} else {
-			$.ajax({
-				url: 'https://calm-thicket-5529.herokuapp.com/users', 
+			var success = $.ajax({
+				url: 'https://calm-thicket-5529.herokuapp.com/login', 
 				dataType: 'json', 
-				type: 'GET', 
-				success: function(data){
-					var newUser = true;
-					var wrongPassword = false;
-					for(var i=0; i<data.length; i++) {
-						if(email == data[i].email) {
-							newUser = false;
-							break;
-						} else if(email == data[i].email && password !== data[i].password) {  // have to fix this part
-							wrongPassword = true;
-							break;
-						}
-					}			
-					if(newUser) {
-						error.innerHTML = 'The user is not found. Please sign up'
-					} else if(wrongPassword) {
-						error.innerHTML = 'The password is incorrect'
-					} else {
+				type: 'POST', 
+				data: {email, password},
+				statusCode: {
+					401: function() {
+						error.innerHTML = "User/ password combination does not matches"
+					},
+					200: function() {
 						app.navigate('/search/zip_code/', {trigger: true});
 					}
 				}
 			});
+			
+
 		}
 	}
 });
