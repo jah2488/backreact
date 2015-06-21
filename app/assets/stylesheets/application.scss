@@ -188,15 +188,15 @@ footer {
 		margin: 0 auto;
 			
 		.form-label{
-			float: left;
-			margin-top: 20px;
-			clear: left;	
+			/* float: left; */
+			/* margin-top: 20px; */
+			/* clear: left;	 */
 		}
 
 		.input-box {
 			width: 200px;
-			float: left;
-			margin-left: 10px;
+			/* float: right; */
+			/* margin-left: 10px; */
 		}
 	}
 	}
@@ -218,17 +218,12 @@ footer {
 
 	}
 
-
 }
-
-
 .logout-btn {
 		background-color: $blue;
 		float: right;
 		margin-bottom: 40px;
 	}	
-
-
 
 /* DASHBOARD */
 .dashboard-page{
@@ -238,6 +233,11 @@ footer {
 	}
 	
 }
+
+/* PROFILE PAGE */
+
+
+
 
 /* MEDIUM MEDIA QUERY */
 
@@ -262,16 +262,18 @@ footer {
 	.join-btn {margin-right: 20px;}
 }
 	.login-page{
-		form {width: 500px;}
+	
 		.join-btn{margin-right:10px;}
 	}
+		form,
+		.search-form{width: 500px;}
 
-		.search-form,
+		.dashboard-page{
 		.post-box{
-		width: 500px;
-		margin: 0 auto;
+		width: 640px;
+		
 	}
-	
+	}
 
 	/* .logout-btn{margin-right: 60px;} */
 	
@@ -284,8 +286,11 @@ footer {
 	.welcome-page,
 	 .login-page,
 	 .Signup-page,
+	 .ride-results-page,
 	 .dashboard-page{
 		padding: 100px;}
+
+	
 
 
 	}
