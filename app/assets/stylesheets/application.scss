@@ -27,7 +27,7 @@ $source: "source-sans-pro";
 $altgoth: "alternate-gothic-no-3-d";
 
 /* TYPOGRAPHY */
-	
+
 h1{
 	font-family: $altgoth, helvetica, arial, sans-serif;
 	font-size: 4em;
@@ -69,7 +69,7 @@ footer{
 
 .container {
 	width: 100%;
-	
+
 }
 
 *,
@@ -81,9 +81,11 @@ footer{
 }
 
 /* WELCOME PAGE */
+
 .welcome-page, 
 .login-page,
 .Signup-page{
+
 	margin: 0 auto;
 	padding: 20px;
 	text-align: center;
@@ -92,7 +94,7 @@ footer{
 		width: 100%;
 		margin-bottom: 18px;
 	}
-	
+
 	.welcome-text, form {
 		background: #e6e6e6;
 		border-radius: 5px;
@@ -102,7 +104,7 @@ footer{
 
 	/* 	h2 {margin-bottom: 16px;} */
 
-		p{ 
+		p{
 		margin-bottom: 10px;
 		text-align: left;}
 
@@ -112,7 +114,7 @@ footer{
 		background-color: $green;
 		width: 200px;
 		padding: 10px;
-		margin-right: 10px;	
+		margin-right: 10px;
 	}
 
 	.login-btn {
@@ -120,8 +122,8 @@ footer{
 		width: 200px;
 		padding: 10px;
 		margin-top: 16px;
-		margin-right: 10px;	
-	} 	
+		margin-right: 10px;
+	}
 }
 
 footer {
@@ -135,6 +137,7 @@ footer {
 		width: 320px;
 		margin: 0 auto;
 	}
+
 	
 	/* h2{margin-bottom: 20px;} */
 	
@@ -142,10 +145,14 @@ footer {
 
 	.join-btn{
 		margin-top: 20px;
+
+
+	h2{
 		margin-bottom: 20px;
 		margin-right: 10px;
 	}
 	}
+
 
 	.form-label, 
 	.password{
