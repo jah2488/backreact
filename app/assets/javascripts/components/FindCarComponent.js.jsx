@@ -11,13 +11,16 @@ var FindCar = React.createClass({
 
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
+
 				<h2>Start the carpool conversation!</h2>
 
-				<form className='search-form' onSubmit={this.findClassmate}>
+				
+				<form className='search-form'>
+
 					<label className='form-label' ref='zipCode'>Enter your ZIP Code</label><br/>
 					<input type='text' ref='searchZip' className='input-box' placeholder='ZIP Code' /><br/>
 
-	  				<button className="submit-btn">
+	  				<button className="submit-btn" onClick={this.findClassmate}>
 	  					<strong>Submit</strong>
 	  				</button>
 	  			</form>
@@ -27,7 +30,9 @@ var FindCar = React.createClass({
 					</h2>
 				</div>
 				<div className="results-box">
-				
+
+				//results go here
+
 				</div>
 				<footer>
 					Created by Gracie, Maryna and Carissa
@@ -38,10 +43,6 @@ var FindCar = React.createClass({
 	findClassmate: function(e) {
 		e.preventDefault();
 		var zip = this.refs.searchZip.getDOMNode().value;
-		var user = this.refs.user.getDOMNode();
-		var address = this.refs.address.getDOMNode();
-		var phone = this.refs.phone.getDOMNode();
-		var email = this.refs.email.getDOMNode();
 
 		$.ajax({ 													
 			url: 'https://calm-thicket-5529.herokuapp.com/search/zip_code/' + zip, 
@@ -56,23 +57,8 @@ var FindCar = React.createClass({
 						email.innerHTML = data[i].email;
 					}
 				}
-				if(existedUser == true) {
-					error.innerHTML = 'Please choose another username';
-				} else if(!user.isValid()) {
-					error.innerHTML = user.validationError;
-				} else {
-					var newUser = user.attributes;
-					$.ajax({
-						url: 'https://calm-thicket-5529.herokuapp.com/users', 
-						dataType: 'json', 
-						type: 'POST', 
-						data: newUser
-					});
-					app.navigate('/search/zip_code/', {trigger: true});
-				}
 			} 
-		});
-		
+		});		
 	},
 	logOut: function() {
 		app.navigate('', {trigger: true});
