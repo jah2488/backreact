@@ -23,11 +23,11 @@ var Welcome = React.createClass({
 					 
 				</div>
 
-				<button className="join-btn">
+				<button className="join-btn" onClick={this.gotoSignup}>
 					<strong>Sign Up!</strong>
 				</button>
 
-				<button className="login-btn">
+				<button className="login-btn" onClick={this.gotoLogin}>
 					<strong>Log In</strong>
 		  		</button>
 
@@ -36,6 +36,14 @@ var Welcome = React.createClass({
 				</footer>
 			</div>
 		)
+	},
+	gotoLogin: function(e) {
+		e.preventDefault();
+		app.navigate('/login', {trigger: true});
+	},
+	gotoSignup: function(e) {
+		e.preventDefault();
+		app.navigate('/signup', {trigger: true});
 	}	
 });
 

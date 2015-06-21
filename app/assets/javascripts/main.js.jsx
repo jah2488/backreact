@@ -4,8 +4,8 @@ var App = Backbone.Router.extend({
 		'': 'gotoWelcome',
 		'login': 'gotoLogin',
 		'signup': 'gotoSignin',
-		'dashboard': 'gotoDashboard',
-		'findCar': 'gotoFind'
+		'posts': 'gotoDashboard',
+		'search/zip_code/': 'gotoFind'
 	},
 	gotoWelcome: function() {
 		React.render(<Welcome />, document.getElementById('container'));
