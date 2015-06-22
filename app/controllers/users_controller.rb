@@ -11,13 +11,17 @@ class UsersController < ApplicationController
 
 
   def create
-    begin
-      user = User.create(username: params[:username], email:params[:email], password: params[:password], password_confirmation: params[:password_confirmation], phone_number: params[:phone_number], address: params[:address], zip_code: params[:zip_code])
+   begin
+     user = User.new(username: params[:username], email:params[:email], password: params[:password], password_confirmation: params[:password_confirmation], phone_number: params[:phone_number], address: params[:address], zip_code: params[:zip_code])
+    if user.save
       render json: user
-    rescue ActionController::ParameterMissing => error
-      render json: { error: error.message }, status: 422
-    end
-  end
+    else
+     render json: { message: 'Validation error occured.', errors: user.errors}, status: 403
+   end
+   rescue ActionController::ParameterMissing => error
+     render json: { error: error.message }, status: 422
+   end
+ end
 
 
   def update

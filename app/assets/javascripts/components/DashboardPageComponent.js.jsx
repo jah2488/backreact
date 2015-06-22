@@ -1,4 +1,7 @@
 var Dashboard = React.createClass({
+	getInitialState: function() {
+    	return {data: []};
+  	},
 	render: function() {
 		return (
 			<div className="dashboard-page">
@@ -13,7 +16,11 @@ var Dashboard = React.createClass({
 
 	  			<h2>Post Stuff!</h2>
 	  			
-				<div className="post-box"></div>
+				<div className="post-box">
+					<Posts allPosts={this.state.data} />
+					// posts go here........
+
+				</div>
 
 				<footer>
 					Created by Gracie, Maryna and Carissa

@@ -11,4 +11,4 @@ var Post = Backbone.Model.extend({
 		}
 		return false;
 	}
-})
+});
