@@ -29,13 +29,13 @@ var Welcome = React.createClass({
 
 				<button className="join-btn" onClick={this.gotoSignup}>
 					<strong>Sign Up!</strong>
-				</button>	
+				</button>
 
 		  		<footer>
 					Created by Gracie, Maryna and Carissa
 				</footer>
 			</div>
-		)
+		);
 	},
 	gotoLogin: function(e) {
 		e.preventDefault();

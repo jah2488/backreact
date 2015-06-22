@@ -1,20 +1,20 @@
 var FindCar = React.createClass({
 	render: function() {
 
-		return (			
+		return (
 			<div className="ride-results-page">
 				<div className='header-btn'>
 					<button className="logout-btn" onClick={this.logOut}>
   						<strong>Log Out</strong>
   					</button>
-  				</div>	
+  				</div>
 
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
 
 				<h2>Find classmates living in your zipcode!</h2>
 
-				
+
 				<form className='search-form'>
 
 					<label className='form-label' ref='zipCode'>Enter your ZIP Code</label><br/>
@@ -38,14 +38,14 @@ var FindCar = React.createClass({
 					Created by Gracie, Maryna and Carissa
 				</footer>
   			</div>
-		)
+		);
 	},
 	findClassmate: function(e) {
 		e.preventDefault();
 		var zip = this.refs.searchZip.getDOMNode().value;
 
-		$.ajax({ 													
-			url: 'https://calm-thicket-5529.herokuapp.com/search/zip_code/' + zip, 
+		$.ajax({
+			url: 'https://calm-thicket-5529.herokuapp.com/search/zip_code/' + zip,
 			dataType: 'json',
 			type: 'GET',
 			success: function(data) {
@@ -57,10 +57,10 @@ var FindCar = React.createClass({
 						email.innerHTML = data[i].email;
 					}
 				}
-			} 
-		});		
+			}
+		});
 	},
 	logOut: function() {
 		app.navigate('', {trigger: true});
-	}	
+	}
 });

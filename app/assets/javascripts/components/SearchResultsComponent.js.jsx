@@ -1,5 +1,6 @@
 var SearchResults = React.createClass({
 	render: function () {
+		return (
 	   	<div>
 	//    	<ul>
 	// 			<li ref='user'></li>
@@ -8,6 +9,6 @@ var SearchResults = React.createClass({
 	// 			<li ref='email'></li>
 	// 		</ul>
 	   	</div>
-
+    );
 	}
 });
