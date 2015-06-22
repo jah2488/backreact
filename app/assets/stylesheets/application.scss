@@ -98,7 +98,7 @@ footer{
 	}
 
 	.welcome-text, form,
-	.post-box{
+	.dashboard-form{
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
@@ -169,7 +169,6 @@ footer {
 		border: 0;
 		text-align: center;
 		margin-top: 6px;
-		/* margin-right: 10px; */
 		margin-bottom: 10px;
 	}
 
@@ -227,16 +226,18 @@ footer {
 
 /* DASHBOARD */
 .dashboard-page{
-	.post-box{
+	.dashboard-form{
 		width: 340px;
 		margin: 0 auto;
-	}
-	
+		line-height: 1.4;
+
+		.input-box{
+			margin-top: 10px;
+			width: 300px;
+			height: 80px;
+		}
+	}	
 }
-
-/* PROFILE PAGE */
-
-
 
 
 /* MEDIUM MEDIA QUERY */
@@ -269,14 +270,16 @@ footer {
 		.search-form{width: 500px;}
 
 		.dashboard-page{
-		.post-box{
+		.dashboard-form{
 		width: 640px;
+
+		.input-box{
+			width: 600px;
+			
+		}
 		
 	}
-	}
-
-	/* .logout-btn{margin-right: 60px;} */
-	
+	}	
 	
 }
 
@@ -289,8 +292,6 @@ footer {
 	 .ride-results-page,
 	 .dashboard-page{
 		padding: 100px;}
-
-	
 
 
 	}
