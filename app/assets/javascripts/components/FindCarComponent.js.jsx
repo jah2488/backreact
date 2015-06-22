@@ -13,7 +13,10 @@ var FindCar = React.createClass({
 
 
 				<h2>Find classmates living in your zipcode!</h2>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
 				<form className='search-form'>
 
@@ -30,8 +33,7 @@ var FindCar = React.createClass({
 					</h2>
 				</div>
 				<div className="results-box">
-
-				//results go here
+					<p>Results!</p>
 
 				</div>
 				<footer>

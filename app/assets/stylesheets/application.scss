@@ -98,7 +98,12 @@ footer{
 	}
 
 	.welcome-text, form,
+<<<<<<< HEAD
+	.post-box,
+	.results-box{
+=======
 	.dashboard-form{
+>>>>>>> master
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
@@ -141,7 +146,8 @@ footer {
 .login-page{
 
 	form,
-	.search-form{
+	.search-form,
+	.results-box{
 		width: 320px;
 		margin: 0 auto;
 	}
@@ -198,14 +204,14 @@ footer {
 			/* margin-left: 10px; */
 		}
 	}
-	}
+}
 
 .submit-btn{
 		background-color: $green;
 		width: 200px;
-		margin-top: 20px;
+		margin-top: 10px;
 		padding: 10px;
-		}
+}
 
 /* Find Car Component */
 .ride-results-page{
@@ -222,13 +228,25 @@ footer {
 		background-color: $blue;
 		float: right;
 		margin-bottom: 40px;
-	}	
+}	
 
 /* DASHBOARD */
 .dashboard-page{
 	.dashboard-form{
 		width: 340px;
 		margin: 0 auto;
+<<<<<<< HEAD
+
+		.type-post{
+			.input-box{width: 200px;}
+		}
+		.submit-btn{
+			width: 80px;
+			margin-left: 10px;
+			padding: 4px;
+			margin-top: 10px;
+		}
+=======
 		line-height: 1.4;
 
 		.input-box{
@@ -238,7 +256,15 @@ footer {
 		}
 	}	
 }
+>>>>>>> master
 
+		.posted-post,
+		.post-comments{
+			.input-box{width: 290px;}
+		}
+	}
+}
+	
 
 /* MEDIUM MEDIA QUERY */
 
@@ -261,14 +287,31 @@ footer {
 	}
 
 	.join-btn {margin-right: 20px;}
-}
+	}	
+
 	.login-page{
 	
 		.join-btn{margin-right:10px;}
 	}
-		form,
-		.search-form{width: 500px;}
 
+<<<<<<< HEAD
+	form,
+	.search-form,
+	.results-box{width: 500px;}
+
+	.dashboard-page{
+			.post-box{width: 640px;
+				.type-post{
+					.input-box{width: 500px;}
+				}
+
+			.posted-post,
+			.post-comments{
+				.input-box{width: 590px;}
+			}
+			}
+	}	
+=======
 		.dashboard-page{
 		.dashboard-form{
 		width: 640px;
@@ -281,6 +324,7 @@ footer {
 	}
 	}	
 	
+>>>>>>> master
 }
 
 /* LARGE MEDIA QUERY */
@@ -293,6 +337,12 @@ footer {
 	 .dashboard-page{
 		padding: 100px;}
 
+<<<<<<< HEAD
+		.type-post{
+			.input-box{width: 200px;}
+		}
+=======
+>>>>>>> master
 
 	}
 
