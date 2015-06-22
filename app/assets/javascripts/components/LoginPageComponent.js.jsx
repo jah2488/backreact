@@ -48,7 +48,7 @@ var Login = React.createClass({
 				url: 'https://calm-thicket-5529.herokuapp.com/login',
 				dataType: 'json',
 				type: 'POST',
-				data: {email, password},
+				data: { email: email, password: password },
 				statusCode: {
 					401: function() {
 						error.innerHTML = "User/ password combination does not matches";
