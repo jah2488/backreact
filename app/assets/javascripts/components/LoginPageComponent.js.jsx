@@ -54,7 +54,7 @@ var Login = React.createClass({
 						error.innerHTML = "User/ password combination does not matches"
 					},
 					200: function() {
-						app.navigate('/search/zip_code/', {trigger: true});
+						app.navigate('/search/zipcode/', {trigger: true});
 					}
 				}
 			});

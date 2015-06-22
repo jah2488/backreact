@@ -1,6 +1,9 @@
 var FindCar = React.createClass({
+	getInitialState: function() {
+    	return {data: []};
+  	},
 	render: function() {
-
+		
 		return (			
 			<div className="ride-results-page">
 				<div className='header-btn'>
@@ -31,7 +34,7 @@ var FindCar = React.createClass({
 				</div>
 				<div className="results-box">
 
-				//results go here
+					<SearchResults results={this.state.data} />
 
 				</div>
 				<footer>
@@ -43,21 +46,25 @@ var FindCar = React.createClass({
 	findClassmate: function(e) {
 		e.preventDefault();
 		var zip = this.refs.searchZip.getDOMNode().value;
-
-		$.ajax({ 													
-			url: 'https://calm-thicket-5529.herokuapp.com/search/zip_code/' + zip, 
+		
+		var results = $.ajax({ 													
+			url: 'https://calm-thicket-5529.herokuapp.com/search/zipcode/' + zip, 
 			dataType: 'json',
 			type: 'GET',
 			success: function(data) {
+				var neighbors = [];
 				for(var i=0; i<data.length; i++) {
 					if(zip == data[i].zip_code) {
-						user.innerHTML = data[i].username;
-						address.innerHTML = data[i].address;
-						phone.innerHTML = data[i].phone;
-						email.innerHTML = data[i].email;
+						neighbors.push({
+							user: data[i].username,
+							address: data[i].address,
+							phone: data[i].phone,
+							email: data[i].email,
+						})	
 					}
 				}
-			} 
+				this.setState({data: neighbors});
+			}.bind(this) 
 		});		
 	},
 	logOut: function() {
