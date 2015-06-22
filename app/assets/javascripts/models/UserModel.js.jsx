@@ -1,5 +1,4 @@
 /* global Backbone, validator */
-'use strict';
 var UserModel = Backbone.Model.extend({
 	defaults: {
 		id: null,
@@ -38,7 +37,7 @@ var UserModel = Backbone.Model.extend({
 			return 'Your ZIP Code should only contain numbers';
 		} else if(!validator.isLength(attr.zip_code, 5)) {
 			return 'ZIP Code should be 5 characters long';
-		} 
+		}
 		return false;
 	}
 });
