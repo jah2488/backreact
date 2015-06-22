@@ -13,10 +13,7 @@ var FindCar = React.createClass({
 
 
 				<h2>Find classmates living in your zipcode!</h2>
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 
 				<form className='search-form'>
 
