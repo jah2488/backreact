@@ -30,8 +30,7 @@ var FindCar = React.createClass({
 					</h2>
 				</div>
 				<div className="results-box">
-
-				//results go here
+					<p>Results!</p>
 
 				</div>
 				<footer>

@@ -98,7 +98,8 @@ footer{
 	}
 
 	.welcome-text, form,
-	.post-box{
+	.post-box,
+	.results-box{
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
@@ -141,7 +142,8 @@ footer {
 .login-page{
 
 	form,
-	.search-form{
+	.search-form,
+	.results-box{
 		width: 320px;
 		margin: 0 auto;
 	}
@@ -277,7 +279,8 @@ footer {
 	}
 
 	form,
-	.search-form{width: 500px;}
+	.search-form,
+	.results-box{width: 500px;}
 
 	.dashboard-page{
 			.post-box{width: 640px;

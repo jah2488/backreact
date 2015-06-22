@@ -30,7 +30,7 @@ var Dashboard = React.createClass({
 					</div>
 
 					<div className="post-comments">
-					<input type='text' ref='comment-text' className='input-box' placeholder='See comments' />
+					<input type='text' ref='comment-text' className='input-box' placeholder='See comments from classmates' />
 					</div>
 
 	  			</div>
