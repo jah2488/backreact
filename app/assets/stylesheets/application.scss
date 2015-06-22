@@ -98,8 +98,12 @@ footer{
 	}
 
 	.welcome-text, form,
+<<<<<<< HEAD
 	.post-box,
 	.results-box{
+=======
+	.dashboard-form{
+>>>>>>> master
 		background: #e6e6e6;
 		border-radius: 5px;
 		padding: 16px;
@@ -228,9 +232,10 @@ footer {
 
 /* DASHBOARD */
 .dashboard-page{
-	.post-box{
+	.dashboard-form{
 		width: 340px;
 		margin: 0 auto;
+<<<<<<< HEAD
 
 		.type-post{
 			.input-box{width: 200px;}
@@ -241,6 +246,17 @@ footer {
 			padding: 4px;
 			margin-top: 10px;
 		}
+=======
+		line-height: 1.4;
+
+		.input-box{
+			margin-top: 10px;
+			width: 300px;
+			height: 80px;
+		}
+	}	
+}
+>>>>>>> master
 
 		.posted-post,
 		.post-comments{
@@ -278,6 +294,7 @@ footer {
 		.join-btn{margin-right:10px;}
 	}
 
+<<<<<<< HEAD
 	form,
 	.search-form,
 	.results-box{width: 500px;}
@@ -294,6 +311,20 @@ footer {
 			}
 			}
 	}	
+=======
+		.dashboard-page{
+		.dashboard-form{
+		width: 640px;
+
+		.input-box{
+			width: 600px;
+			
+		}
+		
+	}
+	}	
+	
+>>>>>>> master
 }
 
 /* LARGE MEDIA QUERY */
@@ -306,9 +337,12 @@ footer {
 	 .dashboard-page{
 		padding: 100px;}
 
+<<<<<<< HEAD
 		.type-post{
 			.input-box{width: 200px;}
 		}
+=======
+>>>>>>> master
 
 	}
 

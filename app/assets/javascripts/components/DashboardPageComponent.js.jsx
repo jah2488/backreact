@@ -11,6 +11,7 @@ var Dashboard = React.createClass({
 
 	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
+
 	  			<h2>Start a conversation with your classmates!</h2>
 
 
@@ -34,7 +35,7 @@ var Dashboard = React.createClass({
 					</div>
 
 	  			</div>
-
+	  			
 				<footer>
 					Created by Gracie, Maryna and Carissa
 				</footer>
