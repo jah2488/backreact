@@ -16,12 +16,23 @@ var Dashboard = React.createClass({
 
 				<div className='post-box'>
 
-					<label className='form-label' ref='post'></label><br/>
-					<input type='text' ref='post' className='input-box' placeholder='Type your post here' /><br/>
+					<div className="type-post">
+					<input type='text' ref='write-post' className='input-box' placeholder='Type your post here' />
 
-	  				<button className="submit-btn" onClick={this.findClassmate}>
-	  					<strong>Submit</strong>
-	  				</button>
+						<button className="submit-btn" onClick={this.findClassmate}>
+	  						<strong>Submit</strong>
+	  					</button>
+
+					</div>
+
+	  				<div className="posted-post">
+					<input type='text' ref='posted-text' className='input-box' placeholder='See your post here' />
+					</div>
+
+					<div className="post-comments">
+					<input type='text' ref='comment-text' className='input-box' placeholder='See comments' />
+					</div>
+
 	  			</div>
 
 				<footer>
