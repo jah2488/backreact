@@ -11,9 +11,18 @@ var Dashboard = React.createClass({
 
 	  			<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 
-	  			<h2>Post Stuff!</h2>
-	  			
-				<div className="post-box"></div>
+	  			<h2>Start a conversation with your classmates!</h2>
+
+
+				<div className='post-box'>
+
+					<label className='form-label' ref='post'></label><br/>
+					<input type='text' ref='post' className='input-box' placeholder='Type your post here' /><br/>
+
+	  				<button className="submit-btn" onClick={this.findClassmate}>
+	  					<strong>Submit</strong>
+	  				</button>
+	  			</div>
 
 				<footer>
 					Created by Gracie, Maryna and Carissa
