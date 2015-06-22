@@ -3,9 +3,12 @@ var Signup = React.createClass({
 	render: function() {
 		return (
 			<div className='Signup-page'>
+
+
 				<button className="home-btn" onClick={this.gotoWelcome}>
-    				<strong>Home</strong>
-				</button>
+                   <strong>Home</strong>
+                </button>
+
 				<img className='welcome-image' src="assets/home-page-visual.png" alt="Iron Rides Carpool"/>
 				<h2>We need your information!</h2>
 				<div className='form'>
@@ -32,7 +35,7 @@ var Signup = React.createClass({
 						<input type='text' ref='signupZip' className='input-box' placeholder='78704' /><br/>
 						
 						<div className='error-msg' ref='error'></div><br/>
-						<button type='submit' ref='signupSubmit' className='submit-btn'>Submit</button><br/>
+						<button type='submit' ref='signupSubmit' className='submit-btn'><strong>Submit</strong></button><br/>
 					</form>
 				</div>
 				<footer>

@@ -23,13 +23,13 @@ var Welcome = React.createClass({
 
 				</div>
 
-				<button className="join-btn" onClick={this.gotoSignup}>
-					<strong>Sign Up!</strong>
-				</button>
-
 				<button className="login-btn" onClick={this.gotoLogin}>
 					<strong>Log In</strong>
 		  		</button>
+
+				<button className="join-btn" onClick={this.gotoSignup}>
+					<strong>Sign Up!</strong>
+				</button>	
 
 		  		<footer>
 					Created by Gracie, Maryna and Carissa
