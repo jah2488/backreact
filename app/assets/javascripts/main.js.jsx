@@ -1,17 +1,28 @@
 /* global Backbone React */
 var App = Backbone.Router.extend({
-    routes: {
-        '': 'profile',
-        'edit': 'edit'
-    },
-    profile: function() {
-      React.render(<Profile/>, document.querySelector('#container'));
-    },
-    edit: function() {
-      React.render(<Edit/>, document.querySelector('#container'));
-    }
+	routes: {
+		'': 'gotoWelcome',
+		'login': 'gotoLogin',
+		'signup': 'gotoSignin',
+		'posts': 'gotoDashboard',
+		'search/zipcode/': 'gotoFind'
+	},
+	gotoWelcome: function() {
+		React.render(<Welcome />, document.getElementById('container'));
+	},
+	gotoLogin: function() {
+		React.render(<Login />, document.getElementById('container'));
+	},
+	gotoSignin: function() {
+		React.render(<Signup />, document.getElementById('container'));
+	},
+	gotoDashboard: function() {
+		React.render(<Dashboard />, document.getElementById('container'));
+	},
+	gotoFind: function() {
+		React.render(<FindCar />, document.getElementById('container'));
+	}
 });
 
 var app = new App();
 Backbone.history.start();
-app.navigate('edit');

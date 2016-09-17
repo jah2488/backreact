@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'pg'
@@ -14,6 +14,8 @@ gem 'puma'
 gem 'react-rails'
 
 
+
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
@@ -26,6 +28,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-backbone'
   gem 'rails-assets-react'
   gem 'rails-assets-moment'
+  gem 'rails-assets-validator'
 end
 
 group :production do
